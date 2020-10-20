@@ -17,6 +17,7 @@ namespace bisiesto
 			string resp;
 			int valor;
 			// Se coloca todo dentro de un ciclo infinito
+			// TODO: Hacer que solamente se reciban valores enteros
 			while(true)
 			{
 				// Se recibe una cadena de caracteres
@@ -33,8 +34,6 @@ namespace bisiesto
 				// Aquí se maneja la excepción, esta es del tipo FormatException
 				catch(FormatException e)
 				{
-					// Mostrar mensajes de error
-					Console.WriteLine(e);
 					Console.WriteLine("El valor no es un número entero");
 					Console.WriteLine("¡Favor de ingresar de nuevo!");
 				}
@@ -47,18 +46,8 @@ namespace bisiesto
 		{
 			// TODO: Colocar colores y esas cosas en el programa
 			int aa;			
-			/*do
-			{
-				Console.WriteLine("Ingresar un año (valor entero y positivo): ");
-				string a = Console.ReadLine();
-				// Así ya se puede convertir a un entero de 32 bits
-				aa = Convert.ToInt32(a);
-				if (aa > 0)
-					break;
-				else
-					Console.WriteLine("No manches, que no sabes leer!");
-			}
-			while(true);*/
+			
+			// Recibir el valor entero positivo del usuario
 			aa = ingresarInt("Ingresar un año (valor entero y positivo): ");
 			
 			// Probación de que es un año bisiesto
